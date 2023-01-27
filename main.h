@@ -26,8 +26,8 @@
 */
 struct fmt
 {
-  char fmt;
-  int (*fn)(va_list, char[], int, int, int, int); 
+char fmt;
+int (*fn)(va_list, char[], int, int, int, int);
 };
 
 /**
@@ -43,9 +43,9 @@ va_list list, char buffer[], int flags, int width, int precision, int size);
 
 /****************** FUNCTIONS ******************/
 /* Funtions to print chars and strings */
-int print_char(va_list types, char buffer[],	       
+int print_char(va_list types, char buffer[],
 	       int flags, int width, int precision, int size);
-int print_string(va_list types, char buffer[],		 
+int print_string(va_list types, char buffer[],
 		 int flags, int width, int precision, int size);
 int print_percent(va_list types, char buffer[],
 		  int flags, int width, int precision, int size);
@@ -63,7 +63,7 @@ int print_hexadecimal(va_list types, char buffer[],
 int print_hexa_upper(va_list types, char buffer[],
 		     int flags, int width, int precision, int size);
 int print_hexa(va_list types, char map_to[],
-	       char buffer[], int flags, char flag_ch, int width, int precision, int size);
+	char buffer[], int flags, char flag_ch, int width, int precision, int size);
 /* Function to print non printable characters */
 int print_non_printable(va_list types, char buffer[],
 			int flags, int width, int precision, int size);
@@ -92,7 +92,7 @@ int write_pointer(char buffer[], int ind, int length,
 		  int width, int flags, char padd, char extra_c, int padd_start);
 int write_unsgnd(int is_negative, int ind,
 char buffer[],
-                  int flags, int width, int precision, int size);
+int flags, int width, int precision, int size);
 /****************** UTILS ******************/
 int is_printable(char);
 int append_hexa_code(char, char[], int);
